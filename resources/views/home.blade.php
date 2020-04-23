@@ -165,6 +165,18 @@
 						<input type="text" name="email" id="vemail" class="form-control" readonly>
 					</div>
 				</div>
+				<div class="form-group">
+					<label class="control-label">Created At</label>
+					<div class="form-line">
+						<input type="text" name="created_at" id="vcreated_at" class="form-control" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Updated At</label>
+					<div class="form-line">
+						<input type="text" name="updated_at" id="vupdated_at" class="form-control" readonly>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function index()
     {
         if(request()->ajax()){
-            $pgw = Pegawai::all();
+            $pgw = Pegawai::get();
 
             return Datatables::of($pgw)
                   ->addColumn('action', function($row){
