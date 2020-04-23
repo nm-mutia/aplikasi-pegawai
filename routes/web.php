@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',  'HomeController@index')->name('home');
 Route::get('pegawai',  'HomeController@index')->name('pegawai');
-Route::post('pegawai',  'HomeController@store')->name('pegawai.store');
-Route::get('pegawai/{id}/edit',  'HomeController@edit')->name('pegawai.edit');
-Route::put('pegawai/{id}',  'HomeController@update')->name('pegawai.update');
-Route::delete('pegawai/{id}',  'HomeController@destroy')->name('pegawai.destroy');
+Route::post('pegawai',  'HomeController@store');
+Route::get('pegawai/{id}',  'HomeController@show');
+Route::get('pegawai/{id}/edit',  'HomeController@edit');
+Route::put('pegawai/{id}',  'HomeController@update');
+Route::delete('pegawai/{id}',  'HomeController@destroy');

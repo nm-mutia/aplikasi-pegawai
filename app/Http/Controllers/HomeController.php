@@ -72,6 +72,16 @@ class HomeController extends Controller
         return response()->json(['success' => 'Data telah berhasil ditambahkan.']);
     }
 
+    // show
+    public function show($id)
+    {
+        if(request()->ajax()){
+            $data = Pegawai::findOrFail($id);
+            return response()->json(['result' => $data]);
+        }
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      *

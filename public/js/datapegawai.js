@@ -20,6 +20,8 @@ $('#pegawai-table').DataTable({
 });
 
 $('#tambah_data').click(function(){
+	$('.modal-title').text('Tambah Data Pegawai');
+
 	$('#action_button').val('Tambah');
 	$('#action').val('Add');
 	$('#action_button').addClass('btn-success');
@@ -74,6 +76,31 @@ $('#tambah_data_form').on('submit', function(event){
 		error: function (jqXHR, textStatus, errorThrown) { 
 			console.log(jqXHR); 
 		}
+	});
+});
+
+//view
+$(document).on('click', '.view', function(){
+	var id = $(this).attr('id');
+	$.ajax({
+		url: "/pegawai/"+id, //show
+		datatype: "json",
+		success: function(data){
+			$('#vnama').val(data.result.nama);
+            $('#vjenis_kelamin').val(data.result.jenis_kelamin);
+			$('#vdepartemen').val(data.result.departemen);
+			$('#vlevel').val(data.result.level);
+			$('#vagama').val(data.result.agama);
+			$('#vkontak').val(data.result.kontak);
+			$('#vemail').val(data.result.email);
+			$('#vcreated_at').val(data.result.created_at);
+			$('#vupdated_at').val(data.result.updated_at);
+
+			$('.modal-title').text('Data Pegawai - '+id);
+		},
+        error: function (jqXHR, textStatus, errorThrown) { 
+            console.log(jqXHR); 
+        }
 	});
 });
 

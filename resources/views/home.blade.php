@@ -110,6 +110,65 @@
 		</div>
 	</div>
 </div>
+
+
+<!-- form modal lihat data -->
+<div id="viewModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Lihat Data - Pegawai</h5>
+          		<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            		<span aria-hidden="true">×</span>
+          		</button>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label class="control-label">Nama</label>
+					<div class="form-line">
+						<input type="text" name="nama" id="vnama" class="form-control" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Jenis Kelamin</label>
+					<div class="form-line">
+						<input type="text" name="jenis_kelamin" id="vjenis_kelamin" class="form-control" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Departemen</label>
+					<div class="form-line">
+						<input type="text" name="departemen" id="vdepartemen" class="form-control" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Level</label>
+					<div class="form-line">
+						<input type="text" name="level" id="vlevel" class="form-control" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Agama</label>
+					<div class="form-line">
+						<input type="text" name="agama" id="vagama" class="form-control" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Kontak</label>
+					<div class="form-line">
+						<input type="text" name="kontak" id="vkontak" class="form-control" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">E-mail</label>
+					<div class="form-line">
+						<input type="text" name="email" id="vemail" class="form-control" readonly>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 @endsection
 
 @push('script')
